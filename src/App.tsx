@@ -96,24 +96,24 @@ function App() {
     return (
       <>
         <h2>
-          Boot your Raspberry Pi 5 device in USB Boot mode
+          Boot your Raspberry Pi 5 device in USB Mass Storage Mode
         </h2>
         <p>
           <ol>
             
           <li>Disconnect all cables including power cable from your Raspberry Pi 5 device.</li>
           <li>Press the power button on your Raspberry Pi 5 device.</li>
-        <li>While pressing the boot button, connect the USB cable to your Raspberry Pi 5 device.</li>
+          <li>While pressing the boot button, connect the USB cable to your Raspberry Pi 5 device.</li>
           <li>After connecting the USB cable, release the boot button.</li>
-          <li>If you see a solid red light on your Raspberry Pi 5 device, it means your device is connected.</li>
-            <li>Press the "Request Devices" button to connect your device.</li>
+          <li>If you see a solid red light on your Raspberry Pi 5 device, it means your device is ready.</li>
+          <li>Press the "Scan Device" button to start the process.</li>
           </ol>
         </p>
         <button onClick={() => {
           if (bootManager !== undefined) {
             bootManager.requestDevices();
           }
-        }}>Request Devices</button>
+        }}>Scan Device</button>
       </>
     );
   }
@@ -126,7 +126,11 @@ function App() {
           Connected Device: {connectedDevice.model.name} {connectedDevice.serialNumber}
         </p>
         <p>
-          Please select the gadget you want to start
+          Please select the gadget you want to start.
+          <ol>
+            <li>After the boot is successful it may take a few seconds for the device to appear on your computer.</li>
+            <li>After the device appears on your computer you can use the Raspberry Pi Imager or any other tool to flash the operating system.</li>
+          </ol>
         </p>
         {
           deviceAvailableGadgets.map((gadget) => {
