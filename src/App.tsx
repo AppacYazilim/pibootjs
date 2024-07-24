@@ -106,14 +106,14 @@ function App() {
           <li>While pressing the boot button, connect the USB cable to your Raspberry Pi 5 device.</li>
           <li>After connecting the USB cable, release the boot button.</li>
           <li>If you see a solid red light on your Raspberry Pi 5 device, it means your device is ready.</li>
-          <li>Press the "Scan Device" button to start the process.</li>
+          <li>Press the "Scan for Devices" button to start the process.</li>
           </ol>
         </p>
         <button onClick={() => {
           if (bootManager !== undefined) {
             bootManager.requestDevices();
           }
-        }}>Scan Device</button>
+        }}>Scan for Devices</button>
       </>
     );
   }
