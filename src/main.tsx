@@ -9,6 +9,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <App />
     <footer>
+      <a target='__new' href="https://github.com/AppacYazilim/pibootjs">Source Code</a><br />
       Not affiliated with Raspberry Pi. Raspberry Pi is a trademark of the Raspberry Pi Foundation.
     </footer>
     <ToastContainer stacked />
