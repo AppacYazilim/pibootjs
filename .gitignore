@@ -24,3 +24,9 @@ dist-ssr
 *.sw?
 
 .history
+
+# Yarn 4
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+.pnp.*
